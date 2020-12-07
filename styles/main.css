@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    touch-action: manipulation;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}

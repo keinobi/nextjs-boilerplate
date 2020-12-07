@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+
+# production
+/build
+
+# vercel
+.vercel
+
+# misc
+.env*
+.log*

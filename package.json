@@ -1,0 +1,64 @@
+{
+  "name": "nextjs-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true npm run build",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.0.4",
+    "next": "^10.0.3",
+    "next-seo": "^4.17.0",
+    "next-themes": "0.0.10",
+    "postcss": "^8.1.14",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-use": "^15.3.4",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^10.0.3",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.3",
+    "standardx": "^7.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^4.1.2"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
+    "globals": [
+      "fetch"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && tsc"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "standardx --fix"
+  }
+}
