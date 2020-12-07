@@ -12,5 +12,5 @@ An opinionated Next.js boilerplate.
 ## How to use
 
 ```bash
-npx create-next-app --example https://github.com/keinobi/nextjs-boilerplate myapp
+npx create-next-app --example https://github.com/keinobi/nextjs-boilerplate --use-npm myapp
 ```
