@@ -7,36 +7,40 @@
     "build": "next build",
     "start": "next start",
     "analyze": "ANALYZE=true npm run build",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "prepare": "husky install",
+    "tailwind-config-viewer": "tailwind-config-viewer -o"
   },
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.0",
-    "next": "^10.0.7",
-    "next-seo": "^4.20.0",
-    "next-themes": "0.0.12",
-    "postcss": "^8.2.6",
-    "postcss-preset-env": "^6.7.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-use": "^17.1.1",
-    "tailwindcss": "^2.0.3"
+    "next": "^10.1.2",
+    "next-seo": "^4.23.0",
+    "next-themes": "0.0.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-use": "^17.2.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^10.0.7",
-    "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
+    "@next/bundle-analyzer": "^10.1.2",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/jit": "^0.1.18",
+    "@tailwindcss/typography": "^0.4.0",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "husky": "^6.0.0",
+    "postcss": "^8.2.9",
+    "postcss-preset-env": "^6.7.0",
     "standardx": "^7.0.0",
-    "stylelint": "^13.11.0",
+    "stylelint": "^13.12.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^20.0.0",
-    "typescript": "^4.2.2"
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0",
+    "tailwind-config-viewer": "^1.5.1",
+    "tailwindcss": "^2.0.4",
+    "typescript": "^4.2.3"
   },
   "eslintConfig": {
     "rules": {
@@ -52,11 +56,6 @@
     "plugins": [
       "@typescript-eslint/eslint-plugin"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && tsc"
-    }
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "standardx --fix"

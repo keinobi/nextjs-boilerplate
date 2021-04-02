@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install standardx --fix "**/*.{js,jsx,ts,tsx}"
+npx --no-install tsc
