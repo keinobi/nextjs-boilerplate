@@ -6,10 +6,10 @@ export default class Document extends NextDocument {
       <Html lang='ja'>
         <Head>
           <link rel='icon' href='/favicon.ico' />
-          <link rel='apple-touch-icon' href='/icon.png' />
+          <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='manifest' href='/site.webmanifest' />
         </Head>
-        <body className='bg-white text-black dark:bg-black dark:text-white'>
+        <body className='text-gray-800 bg-white'>
           <Main />
           <NextScript />
         </body>

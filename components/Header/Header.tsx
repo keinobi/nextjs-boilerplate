@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import styles from './Header.module.css'
 
-const Header: FC = () => {
+const Header: VFC = () => {
   return (
     <h1 className={styles.heading}>Hello Next.js 👋</h1>
   )

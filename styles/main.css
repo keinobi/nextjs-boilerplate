@@ -10,11 +10,20 @@
 
   body {
     font-size: 14px;
+    font-feature-settings: "pkna" on;
+    letter-spacing: 0.02em;
+
+    line-break: anywhere;
   }
 
+  /* stylelint-disable-next-line */
   @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
     body {
       -webkit-font-smoothing: antialiased;
     }
+  }
+
+  button:disabled {
+    cursor: not-allowed;
   }
 }

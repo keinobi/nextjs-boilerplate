@@ -1,23 +1,17 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './components/**/*.{js,ts,jsx,tsx}',
-      './pages/**/*.{js,ts,jsx,tsx}'
-    ]
-  },
+  content: [
+    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './styles/main.css'
+  ],
   theme: {
     fontFamily: {
       sans: [
-        'ui-sans-serif',
-        'system-ui',
-        'Verdana',
         '"Helvetica Neue"',
-        '"Hiragino Sans"',
-        '"Hiragino Kaku Gothic ProN"',
-        '"Yu Gothic UI"',
-        'Meiryo',
         'Arial',
+        '"Noto Sans JP"',
+        '"Hiragino Kaku Gothic ProN"',
+        '"Hiragino Sans"',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
@@ -25,9 +19,9 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
       serif: [
-        'ui-serif',
         '"Yu Mincho"',
         '"Hiragino Mincho ProN"',
+        'ui-serif',
         'serif'
       ]
     },

@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Header from 'components/Header'
+import Header from '@/components/Header'
 
 const IndexPage: NextPage = () => (
   <>
