@@ -9,9 +9,9 @@ module.exports = {
       sans: [
         '"Helvetica Neue"',
         'Arial',
-        '"Noto Sans JP"',
-        '"Hiragino Kaku Gothic ProN"',
         '"Hiragino Sans"',
+        '"Hiragino Kaku Gothic ProN"',
+        '"BIZ UDPGothic"',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
@@ -19,9 +19,9 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
       serif: [
-        '"Yu Mincho"',
+        'Times New Roman',
         '"Hiragino Mincho ProN"',
-        'ui-serif',
+        '"BIZ UDPMincho"',
         'serif'
       ]
     },
