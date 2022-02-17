@@ -7,9 +7,8 @@ An opinionated Next.js boilerplate.
 - Next.js
 - TypeScript
 - Tailwind CSS
-- CSS Modules
 - Stylelint
-- Husky + lint-staged
+- Husky
 
 ## How to use
 

@@ -1,9 +1,8 @@
 import { VFC } from 'react'
-import styles from './Header.module.css'
 
 const Header: VFC = () => {
   return (
-    <h1 className={styles.heading}>Hello Next.js 👋</h1>
+    <h1 className='px-2 py-12 text-base'>Hello Next.js 👋</h1>
   )
 }
 
