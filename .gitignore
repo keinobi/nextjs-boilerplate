@@ -13,3 +13,5 @@
 # misc
 .env*
 .log*
+
+.vscode

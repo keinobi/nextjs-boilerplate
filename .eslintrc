@@ -1,7 +1,7 @@
 {
   "extends": [
     "standard",
-    "next"
+    "next/core-web-vitals"
   ],
   "globals": {
     "fetch": "readonly"
@@ -27,16 +27,54 @@
       }
     ],
     "@next/next/no-img-element": "off",
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
     "@typescript-eslint/no-use-before-define": [
       "error",
       {
+        "functions": false,
         "variables": false
       }
     ],
     "import/no-anonymous-default-export": "off",
     "jsx-a11y/alt-text": "off",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
     "react/display-name": "off",
-    "react/jsx-handler-names": "off"
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      "never"
+    ],
+    "react/jsx-handler-names": "off",
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandLast": true,
+        "noSortAlphabetically": true,
+        "reservedFirst": [
+          "key",
+          "ref"
+        ]
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ]
   }
 }

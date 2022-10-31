@@ -24,6 +24,15 @@ module.exports = {
     'custom-property-empty-line-before': null,
     'declaration-block-trailing-semicolon': null,
     'declaration-empty-line-before': null,
+    'function-no-unknown': [
+      true,
+      {
+        ignoreFunctions: [
+          'theme'
+        ]
+      }
+    ],
+    'max-line-length': null,
     'no-descending-specificity': null,
     'order/properties-order': [
       [

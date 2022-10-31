@@ -1,7 +1,11 @@
+/**
+ * @type {import('tailwindcss').Config}
+ */
 module.exports = {
   content: [
-    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
     './styles/main.css'
   ],
   theme: {
@@ -30,7 +34,7 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
+    require('@tailwindcss/forms')({ strategy: 'base' }),
     require('@tailwindcss/typography')
   ]
 }
