@@ -7,7 +7,8 @@
     "fetch": "readonly"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "tailwindcss"
   ],
   "rules": {
     "no-undef": "off",
@@ -75,6 +76,8 @@
         "logical": "parens-new-line",
         "prop": "parens-new-line"
       }
-    ]
+    ],
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/enforces-negative-arbitrary-values": "warn"
   }
 }

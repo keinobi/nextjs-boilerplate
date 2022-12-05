@@ -4,9 +4,7 @@
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './styles/main.css'
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     fontFamily: {
@@ -29,7 +27,14 @@ module.exports = {
         'serif'
       ]
     },
-    extend: {}
+    extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem'
+        }
+      }
+    }
   },
   variants: {},
   plugins: [
