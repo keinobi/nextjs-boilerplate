@@ -11,6 +11,17 @@
     "tailwindcss"
   ],
   "rules": {
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "^UNSAFE_"
+        ],
+        "properties": "never",
+        "ignoreGlobals": true,
+        "ignoreImports": true
+      }
+    ],
     "no-undef": "off",
     "no-unused-vars": "off",
     "no-use-before-define": "off",
