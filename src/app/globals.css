@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: ellipsis-font;
+
+    src: local('Arial');
+    unicode-range: U+2026;
+  }
+
   html {
     touch-action: manipulation;
     scroll-behavior: smooth;
@@ -11,12 +18,10 @@
   body {
     font-size: 14px;
     font-feature-settings: "pkna";
-    letter-spacing: 0.01em;
+    text-underline-offset: 2px;
     word-break: break-all;
     overflow-wrap: break-word; /* Safari doesn't support 'anywhere' */
     overflow-wrap: anywhere;
-
-    -webkit-font-smoothing: antialiased;
   }
 
   button:disabled {
@@ -50,20 +55,20 @@
 
   [type="checkbox"]:focus-visible,
   [type="radio"]:focus-visible {
-    @apply ring-2 ring-offset-2 ring-current;
+    @apply ring-2 ring-offset-2 ring-focus;
     outline: none;
   }
 
   [type="checkbox"] {
-    @apply grid place-content-center w-[18px] h-[18px] m-px border-2 border-gray-500 rounded
-      disabled:border-gray-300
-      disabled:checked:bg-gray-300
-      disabled:indeterminate:bg-gray-300
+    @apply grid place-content-center w-[18px] h-[18px] m-px border-2 border-default-500 rounded
+      disabled:border-default
+      disabled:checked:bg-default
+      disabled:indeterminate:bg-default
     ;
   }
 
   [type="radio"] {
-    @apply grid place-content-center w-[18px] h-[18px] m-px border-2 border-gray-500;
+    @apply grid place-content-center w-[18px] h-[18px] m-px border-2 border-default-500;
   }
 
   [type="radio"]:checked {
@@ -78,12 +83,12 @@
   [type="radio"]:checked:focus,
   [type="radio"]:checked:hover {
     background-color: transparent;
-    border-color: currentcolor;
+    border-color: hsl(var(--nextui-primary));
   }
 
   [type="radio"]:disabled,
   [type="radio"]:disabled:focus,
   [type="radio"]:disabled:hover {
-    @apply border-gray-300;
+    border-color: hsl(var(--nextui-default));
   }
 }

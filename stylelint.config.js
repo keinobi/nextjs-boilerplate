@@ -4,36 +4,25 @@ module.exports = {
     'stylelint-config-css-modules'
   ],
   plugins: [
-    'stylelint-order'
+    'stylelint-order',
+    '@stylistic/stylelint-plugin'
   ],
   rules: {
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'tailwind',
-          'layer',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-          'value'
-        ]
-      }
-    ],
+    'at-rule-no-deprecated': [true, {
+      ignoreAtRules: ['apply']
+    }],
+    'at-rule-no-unknown': [true, {
+      ignoreAtRules: ['tailwind', 'layer', 'variants', 'responsive', 'screen', 'value']
+    }],
     'custom-property-empty-line-before': null,
-    'declaration-block-trailing-semicolon': null,
     'declaration-empty-line-before': null,
-    'function-no-unknown': [
-      true,
-      {
-        ignoreFunctions: [
-          'theme'
-        ]
-      }
-    ],
-    'max-line-length': null,
+    'function-no-unknown': [true, {
+      ignoreFunctions: ['theme']
+    }],
+    'import-notation': null,
     'no-descending-specificity': null,
+    '@stylistic/declaration-block-trailing-semicolon': null,
+    '@stylistic/max-line-length': null,
     'order/properties-order': [
       [
         {
