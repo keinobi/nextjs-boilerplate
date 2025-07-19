@@ -12,7 +12,7 @@ module.exports = {
       ignoreAtRules: ['apply']
     }],
     'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['tailwind', 'layer', 'variants', 'responsive', 'screen', 'value']
+      ignoreAtRules: ['plugin', 'source', 'custom-variant', 'theme', 'layer', 'apply', 'variants', 'responsive', 'screen', 'value']
     }],
     'custom-property-empty-line-before': null,
     'declaration-empty-line-before': null,

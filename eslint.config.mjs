@@ -1,7 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import neostandard, { resolveIgnoresFromGitignore } from 'neostandard'
-import tailwindcss from 'eslint-plugin-tailwindcss'
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -13,14 +13,23 @@ const eslintConfig = [
     ts: true,
     ignores: resolveIgnoresFromGitignore()
   }),
-  ...tailwindcss.configs['flat/recommended'],
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
+    files: ['**/*.{jsx,tsx}'],
+    plugins: {
+      'better-tailwindcss': eslintPluginBetterTailwindcss
+    },
     settings: {
-      tailwindcss: {
-        config: 'tailwind.config.js',
-        callees: ['classnames', 'clsx', 'cn', 'ctl', 'cva', 'tv']
+      'better-tailwindcss': {
+        entryPoint: 'src/styles/main.css'
       }
+    },
+    rules: {
+      ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+      'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+      'better-tailwindcss/no-unregistered-classes': ['warn', {
+        ignore: ['react-colorful--custom']
+      }]
     }
   },
   {
@@ -30,9 +39,6 @@ const eslintConfig = [
       'react/display-name': 'off',
       'react/jsx-handler-names': 'off',
       'react/self-closing-comp': 'off',
-
-      'tailwindcss/no-custom-classname': 'off',
-      'tailwindcss/no-unnecessary-arbitrary-value': 'off',
 
       '@next/next/no-img-element': 'off',
 
@@ -46,7 +52,12 @@ const eslintConfig = [
         shorthandLast: true,
         noSortAlphabetically: true,
         reservedFirst: ['key', 'ref']
-      }]
+      }],
+      '@stylistic/padding-line-between-statements': [
+        'warn',
+        { blankLine: 'always', prev: '*', next: ['return', 'multiline-expression', 'block-like', 'try', 'throw'] },
+        { blankLine: 'any', prev: 'import', next: 'import' }
+      ]
     }
   }
 ]
