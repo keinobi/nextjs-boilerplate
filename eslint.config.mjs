@@ -21,7 +21,7 @@ const eslintConfig = [
     },
     settings: {
       'better-tailwindcss': {
-        entryPoint: 'src/styles/main.css'
+        entryPoint: 'src/globals.css'
       }
     },
     rules: {
